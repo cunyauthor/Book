@@ -1,0 +1,31 @@
+<Books>
+    <Book>
+        <Publisher>Hachette Books</Publisher>
+        <Pages>196</Pages>
+        <ISBN>1401308589</ISBN>
+        <Title>The Five People You Meet in Heaven</Title>
+        <Authors>
+            <Author>Mitch Albom</Author>
+        </Authors>
+    </Book>
+    <Book>
+        <Publisher>Philomel Books</Publisher>
+        <Pages>40</Pages>
+        <ISBN>0399255370</ISBN>
+        <Title>The Day the Crayons Quit</Title>
+        <Authors>
+            <Author>Drew Daywalt</Author>
+            <Author>Oliver Jeffers</Author>
+        </Authors>
+    </Book>
+    <Book>
+        <Publisher>HCI</Publisher>
+        <Pages>328</Pages>
+        <ISBN>1558742913</ISBN>
+        <Title>Chicken Soup for the Soul</Title>
+        <Authors>
+            <Author>Jack Canfield</Author>
+            <Author>Mark Victor Hansen</Author>
+        </Authors>
+    </Book>
+</Books>
