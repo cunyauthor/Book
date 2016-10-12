@@ -1,0 +1,51 @@
+---
+title: "Homework 6"
+author: "Ka Man Chan"
+date: "October 10, 2016"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r books}
+
+#Introduction:
+# Read html. json and xml from internet
+# Each file contains info of three books (Author Names, ISBN, Title, Publisher, # of Page)
+
+# HTML : 
+    html_file="https://raw.githubusercontent.com/cunyauthor/Book/master/Book.html"
+# JSON :
+    json_file="https://raw.githubusercontent.com/cunyauthor/Book/master/Book.JSON"
+# XML  : 
+     xml_file="https://raw.githubusercontent.com/cunyauthor/Book/master/Book.xml"
+    
+list.of.packages <- c("XML","RCurl","jsonlite", "methods")
+new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
+if(length(new.packages)) install.packages(new.packages)
+
+library(XML)
+library(RCurl)
+library(jsonlite)
+library("methods")
+
+# Read and Print XML
+xData1 = getURL(xml_file)
+xmldataframe <- xmlToDataFrame(xData1)
+print(xmldataframe)
+
+# Read and Print JSON
+jsondoc <- fromJSON(txt=json_file)
+print(jsondoc)
+
+# Read and Print HTML
+xData2 = getURL(html_file)
+htmldoc = readHTMLTable(xData2) 
+print(htmldoc)
+
+# Summary:
+# The three data frames are not identical but look simlar. 
+# Personally, I like data in Json format and json package is easy to use.
+```
